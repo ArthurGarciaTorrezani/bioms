@@ -1,15 +1,12 @@
-import express, { json, urlencoded } from "express";
+import express from "express";
 import routes from "./routes/router.js";
-
+import bodyParser from "body-parser";
 
 const app = express();
 
-app.use(json());
-app.use(urlencoded({ extended: true }));
-app.use(routes);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.get("/",(req,res)=>{
-     
-})
+app.use(routes);
 
 export default app;

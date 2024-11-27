@@ -1,17 +1,13 @@
-import prisma from "../../config/dataBaseConection.js"
+import prisma from "../../config/dataBaseConection.js";
 
-async function createUser(user){
-     const user = await prisma.user.create({
-          data:{
-               email:"ta@gmail.com",
-               name:"ta",
-               idade:22
-          }
-     })
+async function createUser(data) {
+  data = await prisma.user.create({
+    data,
+  });
 
-     return user
+  return data;
 }
 
 export const coisasAsefazer = {
-     createUser
-}
+  createUser,
+};
