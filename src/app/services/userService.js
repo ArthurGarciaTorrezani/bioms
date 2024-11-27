@@ -1,6 +1,6 @@
 import prisma from "../../config/dataBaseConection.js"
 
-async function createUser(){
+async function createUser(user){
      const user = await prisma.user.create({
           data:{
                email:"ta@gmail.com",

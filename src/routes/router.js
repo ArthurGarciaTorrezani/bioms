@@ -1,6 +1,6 @@
 import {Router} from "express";
 import routesUser from "./userRoute.js";
-const routes = new Router();
+const routes = Router();
 
 routes.use(routesUser);
 
